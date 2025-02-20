@@ -52,5 +52,12 @@ namespace WorkShop
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form14 frm = new Form14();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

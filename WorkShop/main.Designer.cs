@@ -35,12 +35,13 @@
             toolStripMenuItem4 = new ToolStripMenuItem();
             toolStripMenuItem5 = new ToolStripMenuItem();
             manageProductToolStripMenuItem = new ToolStripMenuItem();
+            addUserToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { workShopToolStripMenuItem, manageProductToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { workShopToolStripMenuItem, manageProductToolStripMenuItem, addUserToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -89,6 +90,13 @@
             manageProductToolStripMenuItem.Text = "ManageProduct";
             manageProductToolStripMenuItem.Click += manageProductToolStripMenuItem_Click;
             // 
+            // addUserToolStripMenuItem
+            // 
+            addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            addUserToolStripMenuItem.Size = new Size(66, 20);
+            addUserToolStripMenuItem.Text = "Add user";
+            addUserToolStripMenuItem.Click += addUserToolStripMenuItem_Click;
+            // 
             // main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -115,5 +123,6 @@
         private ToolStripMenuItem toolStripMenuItem4;
         private ToolStripMenuItem toolStripMenuItem5;
         private ToolStripMenuItem manageProductToolStripMenuItem;
+        private ToolStripMenuItem addUserToolStripMenuItem;
     }
 }
