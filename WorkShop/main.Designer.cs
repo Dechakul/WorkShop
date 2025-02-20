@@ -34,12 +34,13 @@
             toolStripMenuItem3 = new ToolStripMenuItem();
             toolStripMenuItem4 = new ToolStripMenuItem();
             toolStripMenuItem5 = new ToolStripMenuItem();
+            manageProductToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { workShopToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { workShopToolStripMenuItem, manageProductToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -56,30 +57,37 @@
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(97, 22);
+            toolStripMenuItem2.Size = new Size(180, 22);
             toolStripMenuItem2.Text = "1 - 2";
             toolStripMenuItem2.Click += toolStripMenuItem_Click;
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(97, 22);
+            toolStripMenuItem3.Size = new Size(180, 22);
             toolStripMenuItem3.Text = "3";
             toolStripMenuItem3.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem4
             // 
             toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(97, 22);
+            toolStripMenuItem4.Size = new Size(180, 22);
             toolStripMenuItem4.Text = "4 - 5";
             toolStripMenuItem4.Click += toolStripMenuItem4_Click;
             // 
             // toolStripMenuItem5
             // 
             toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(97, 22);
+            toolStripMenuItem5.Size = new Size(180, 22);
             toolStripMenuItem5.Text = "6";
             toolStripMenuItem5.Click += toolStripMenuItem5_Click;
+            // 
+            // manageProductToolStripMenuItem
+            // 
+            manageProductToolStripMenuItem.Name = "manageProductToolStripMenuItem";
+            manageProductToolStripMenuItem.Size = new Size(104, 20);
+            manageProductToolStripMenuItem.Text = "ManageProduct";
+            manageProductToolStripMenuItem.Click += manageProductToolStripMenuItem_Click;
             // 
             // main
             // 
@@ -106,5 +114,6 @@
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem toolStripMenuItem4;
         private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem manageProductToolStripMenuItem;
     }
 }

@@ -33,18 +33,18 @@
             txtPname = new TextBox();
             txtPrice = new TextBox();
             groupBox1 = new GroupBox();
+            cboCid = new ComboBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            BtnDelete = new Button();
+            BtnUpdate = new Button();
+            BtnAdd = new Button();
+            btnClear = new Button();
             groupBox2 = new GroupBox();
             dgvResult = new DataGridView();
-            btnClear = new Button();
-            BtnAdd = new Button();
-            BtnUpdate = new Button();
-            BtnDelete = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            cboCid = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvResult).BeginInit();
@@ -101,6 +101,99 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
+            // cboCid
+            // 
+            cboCid.FormattingEnabled = true;
+            cboCid.Location = new Point(119, 268);
+            cboCid.Name = "cboCid";
+            cboCid.Size = new Size(192, 23);
+            cboCid.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(59, 271);
+            label5.Name = "label5";
+            label5.Size = new Size(46, 15);
+            label5.TabIndex = 13;
+            label5.Text = "ประเถท :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(70, 221);
+            label4.Name = "label4";
+            label4.Size = new Size(35, 15);
+            label4.TabIndex = 12;
+            label4.Text = "ราคา :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(49, 128);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 15);
+            label3.TabIndex = 11;
+            label3.Text = "รายละเอียด :";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(54, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(51, 15);
+            label2.TabIndex = 10;
+            label2.Text = "ชื่อสินค้า :";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(49, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 15);
+            label1.TabIndex = 9;
+            label1.Text = "รหัสสินค้า :";
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Location = new Point(285, 326);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(75, 39);
+            BtnDelete.TabIndex = 8;
+            BtnDelete.Text = "ลบ";
+            BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click_1;
+            // 
+            // BtnUpdate
+            // 
+            BtnUpdate.Location = new Point(194, 326);
+            BtnUpdate.Name = "BtnUpdate";
+            BtnUpdate.Size = new Size(75, 39);
+            BtnUpdate.TabIndex = 7;
+            BtnUpdate.Text = "แก้ไข";
+            BtnUpdate.UseVisualStyleBackColor = true;
+            BtnUpdate.Click += BtnUpdate_Click;
+            // 
+            // BtnAdd
+            // 
+            BtnAdd.Location = new Point(103, 326);
+            BtnAdd.Name = "BtnAdd";
+            BtnAdd.Size = new Size(75, 39);
+            BtnAdd.TabIndex = 6;
+            BtnAdd.Text = "เพิ่ม";
+            BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Click += BtnAdd_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(12, 326);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 39);
+            btnClear.TabIndex = 5;
+            btnClear.Text = "เคลียร์";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // groupBox2
             // 
             groupBox2.Controls.Add(dgvResult);
@@ -119,95 +212,7 @@
             dgvResult.Name = "dgvResult";
             dgvResult.Size = new Size(364, 362);
             dgvResult.TabIndex = 0;
-            // 
-            // btnClear
-            // 
-            btnClear.Location = new Point(12, 326);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(75, 39);
-            btnClear.TabIndex = 5;
-            btnClear.Text = "เคลียร์";
-            btnClear.UseVisualStyleBackColor = true;
-            // 
-            // BtnAdd
-            // 
-            BtnAdd.Location = new Point(103, 326);
-            BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(75, 39);
-            BtnAdd.TabIndex = 6;
-            BtnAdd.Text = "เพิ่ม";
-            BtnAdd.UseVisualStyleBackColor = true;
-            // 
-            // BtnUpdate
-            // 
-            BtnUpdate.Location = new Point(194, 326);
-            BtnUpdate.Name = "BtnUpdate";
-            BtnUpdate.Size = new Size(75, 39);
-            BtnUpdate.TabIndex = 7;
-            BtnUpdate.Text = "แก้ไข";
-            BtnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Location = new Point(285, 326);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(75, 39);
-            BtnDelete.TabIndex = 8;
-            BtnDelete.Text = "ลบ";
-            BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(49, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 15);
-            label1.TabIndex = 9;
-            label1.Text = "รหัสสินค้า :";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(54, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(51, 15);
-            label2.TabIndex = 10;
-            label2.Text = "ชื่อสินค้า :";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(49, 128);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 15);
-            label3.TabIndex = 11;
-            label3.Text = "รายละเอียด :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(70, 221);
-            label4.Name = "label4";
-            label4.Size = new Size(35, 15);
-            label4.TabIndex = 12;
-            label4.Text = "ราคา :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(59, 271);
-            label5.Name = "label5";
-            label5.Size = new Size(46, 15);
-            label5.TabIndex = 13;
-            label5.Text = "ประเถท :";
-            // 
-            // cboCid
-            // 
-            cboCid.FormattingEnabled = true;
-            cboCid.Location = new Point(119, 268);
-            cboCid.Name = "cboCid";
-            cboCid.Size = new Size(192, 23);
-            cboCid.TabIndex = 14;
+            dgvResult.CellMouseDoubleClick += dgvResult_CellMouseDoubleClick;
             // 
             // frmManageProduct
             // 
@@ -218,6 +223,7 @@
             Controls.Add(groupBox1);
             Name = "frmManageProduct";
             Text = "จัดการข้อมูลสินค้า";
+            Load += frmManageProduct_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
