@@ -53,7 +53,35 @@ namespace WorkShop
             frm.Show();
         }
 
-        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Form9 frm = new Form9();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Form10 frm = new Form10();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void fromOrderCountryYearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 frm = new Form6();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void insertProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAddProduct frm = new FrmAddProduct();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void formAddUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form14 frm = new Form14();
             frm.MdiParent = this;

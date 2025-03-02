@@ -69,7 +69,7 @@
             Controls.Add(cboCountry);
             Controls.Add(label1);
             Name = "Form3";
-            Text = "Form3";
+            Text = "WorkShop 4 : แสดงข้อมูลลูกค้าแยกตามประเทศ";
             Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResult).EndInit();
             ResumeLayout(false);

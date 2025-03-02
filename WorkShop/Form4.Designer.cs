@@ -69,7 +69,7 @@
             Controls.Add(cboCountry);
             Controls.Add(label1);
             Name = "Form4";
-            Text = "Form4";
+            Text = "Workshop 6 : แสดงข้อมูลสินค้าแยกตามประเภท";
             Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResult).EndInit();
             ResumeLayout(false);

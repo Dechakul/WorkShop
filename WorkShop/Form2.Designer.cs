@@ -109,7 +109,7 @@
             Controls.Add(txtStart);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Workshop 3 : ค้นหาสินค้าตามช่วงของราคา";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)dgvResult).EndInit();
             ResumeLayout(false);

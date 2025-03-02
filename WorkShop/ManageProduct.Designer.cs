@@ -95,9 +95,9 @@
             groupBox1.Controls.Add(txtPrice);
             groupBox1.Controls.Add(txtDes);
             groupBox1.Controls.Add(txtPname);
-            groupBox1.Location = new Point(417, 12);
+            groupBox1.Location = new Point(18, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(371, 401);
+            groupBox1.Size = new Size(371, 390);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
@@ -197,9 +197,9 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dgvResult);
-            groupBox2.Location = new Point(12, 12);
+            groupBox2.Location = new Point(395, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(387, 401);
+            groupBox2.Size = new Size(855, 390);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             // 
@@ -210,15 +210,15 @@
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Location = new Point(11, 22);
             dgvResult.Name = "dgvResult";
-            dgvResult.Size = new Size(364, 362);
+            dgvResult.Size = new Size(838, 362);
             dgvResult.TabIndex = 0;
-            dgvResult.CellMouseDoubleClick += dgvResult_CellMouseDoubleClick;
+            dgvResult.CellContentClick += dgvResult_CellContentClick;
             // 
             // frmManageProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1262, 414);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "frmManageProduct";

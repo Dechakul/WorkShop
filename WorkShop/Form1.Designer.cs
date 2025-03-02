@@ -59,7 +59,7 @@
             Controls.Add(btnConnect);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Connect Database";
             ResumeLayout(false);
             PerformLayout();
         }

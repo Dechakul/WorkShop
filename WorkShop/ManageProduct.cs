@@ -22,12 +22,12 @@ namespace WorkShop
         public void ShowProducts()
         {
             SqlConnection conn = DBConnect.connectNorthwind();
-            String sql = "Select * From temp_products";
+            String sql = "Select * From Products";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvResult.DataSource = dt;
-            dgvResult.Columns[2].Visible = false;
+            //dgvResult.Columns[2].Visible = false;
             dgvResult.Columns[4].Visible = false;
         }
         private void ClearForm()
@@ -62,15 +62,23 @@ namespace WorkShop
             ClearForm();
         }
 
-        private void dgvResult_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
+            if (row < 0) return;
+
             txtPid.Text = dgvResult.Rows[row].Cells[0].Value.ToString();
             txtPname.Text = dgvResult.Rows[row].Cells[1].Value.ToString();
             txtDes.Text = dgvResult.Rows[row].Cells[2].Value.ToString();
             txtPrice.Text = dgvResult.Rows[row].Cells[3].Value.ToString();
-            cboCid.SelectedValue = dgvResult.Rows[row].Cells[4].Value;
+
+            // กำหนดค่าให้ cboCid.SelectedValue ตาม CategoryID
+            if (dgvResult.Rows[row].Cells[4].Value != DBNull.Value)
+            {
+                cboCid.SelectedValue = dgvResult.Rows[row].Cells[4].Value;
+            }
         }
+
         public void InsertProduct()
         {
             SqlConnection conn = DBConnect.connectNorthwind();
@@ -126,15 +134,14 @@ namespace WorkShop
             com.Parameters.AddWithValue("@p_id", p_id);
             com.ExecuteNonQuery();
         }
-
+        
         private void BtnDelete_Click_1(object sender, EventArgs e)
         {
             if (txtPid.Text.Equals(""))
             {
                 return;
             }
-            if (MessageBox.Show("คุณแน่ใจต้องการลบสินค้านี้ใช่หรือไม่", "ยืนยันการทำงาน",
-            MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+            if (MessageBox.Show("คุณแน่ใจต้องการลบสินค้านี้ใช่หรือไม่", "ยืนยันการทำงาน",MessageBoxButtons.OKCancel) == DialogResult.Cancel)
             {
                 return;
             }
@@ -143,5 +150,7 @@ namespace WorkShop
             ShowProducts();
             ClearForm();
         }
+
+       
     }
 }
